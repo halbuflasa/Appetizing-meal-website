@@ -1,0 +1,562 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: #600505;
+    padding: 1em 2em;
+    box-sizing: border-box;
+}
+
+header .logo h1 {
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ddd;
+}
+
+/* Hero Section Styles */
+#hero {
+    padding: 4em 2em; /* Adjust padding to better match the design */
+    background-color: #ffeef0; 
+    align-items: center;
+    justify-content: space-between;
+    height: auto; /* Try removing the height setting */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Adjusted Curved Wave Bottom */
+
+#hero::after {
+    content: "";
+    position: absolute;
+    bottom: -40px; /* Adjust vertical positioning to show more curve */
+    left: 0;
+    width: 100%;
+    height: 120px; /* Increase height to make the wave more prominent */
+    background: url('wave.svg') no-repeat; /* Assuming you have a wave SVG image for a cleaner look */
+    background-size: cover; /* Make sure it scales well */
+    z-index: -1; /* Keep it behind other content */
+}
+
+/* Hero text styling */
+#hero .hero-text {
+    flex: 1;
+    max-width: 45%;
+    position: relative;
+    z-index: 2;
+}
+
+#hero .hero-text h2 {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700; /* Use a lighter weight if needed */
+    font-size: 3em; /* Increase the font size to emphasize the text more */
+    color: #800000;
+    margin-bottom: 0.5em;
+}
+
+
+#hero .hero-text p {
+    font-size: 1.2em;
+    color: #444;
+    line-height: 1.8; /* Adjust line height to match spacing */
+}
+
+
+/* Hero image styling */
+#hero .hero-image {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 2;
+}
+
+#hero .hero-image img {
+    width: auto; /* Use auto to keep the image's aspect ratio */
+    max-width: 500px; /* Slightly increase the size for emphasis */
+    padding-left: 1em; /* Add padding for better spacing */
+}
+
+#hero {
+    display: flex;
+    flex-direction: row;
+    gap: 2em; /* Add spacing between the text and image for a cleaner layout */
+}
+@media (max-width: 768px) {
+    #hero {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        text-align: center;
+    }
+    #hero .hero-text, 
+    #hero .hero-image {
+        max-width: 100%;
+    }
+}
+
+
+
+/* Mission and Vision Section Styles */
+#mission-vision {
+    background-color: #fff;
+    padding: 4em 2em;
+    text-align: center;
+    position: relative;
+}
+
+#mission-vision h3 {
+    font-size: 2.2em;
+    color: #800000;
+    margin-bottom: 1.5em;
+}
+
+.mission-vision-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+.mission-vision-boxes {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.mission, .vision {
+    background: #f8f8f8;
+    padding: 1.5em;
+    border-radius: 12px;
+    width: 45%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: left;
+}
+
+.mission h4, .vision h4 {
+    font-size: 1.5em;
+    color: #800000;
+    margin-bottom: 0.5em;
+}
+
+.mission p, .vision p {
+    font-size: 1em;
+    color: #444;
+    line-height: 1.6;
+}
+
+.leaf-icon {
+    margin-top: 2em;
+    width: 80px;
+    height: auto;
+}
+
+/* Our Services Section Styles */
+#our-services {
+    background-color: #fff;
+    padding: 4em 2em;
+    text-align: center;
+}
+
+#our-services h3 {
+    font-size: 2.2em;
+    color: #800000;
+    margin-bottom: 2em;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+.service {
+    background-color: #ffeef0;
+    padding: 2em;
+    border-radius: 12px;
+    width: 30%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    max-width: 350px;
+}
+
+.service img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+.service h4 {
+    font-size: 1.5em;
+    color: #800000;
+    margin-bottom: 0.5em;
+}
+
+.service p {
+    font-size: 1em;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* Our History Section Styles */
+#our-history {
+    background-color: #fff;
+    padding: 4em 2em;
+    text-align: center;
+    position: relative;
+}
+
+#our-history h3 {
+    font-size: 2.2em;
+    color: #800000;
+    margin-bottom: 2em;
+}
+
+.history-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+}
+
+.history-item {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1em 2em;
+}
+
+.history-item.right {
+    flex-direction: row-reverse;
+}
+
+.history-content {
+    background-color: #ffeef0;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 2em;
+    width: 50%;
+    text-align: left;
+    position: relative;
+}
+
+.history-item.left .history-content {
+    margin-right: 3em;
+}
+
+.history-item.right .history-content {
+    margin-left: 3em;
+}
+
+.history-item img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.history-item::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: #800000;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.history-item.left::after {
+    right: -8px;
+}
+
+.history-item.right::after {
+    left: -8px;
+}
+
+.timeline {
+    position: absolute;
+    width: 3px;
+    background-color: #800000;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    margin-top: 1em;
+}
+/* Our Partners Section Styles */
+#our-partners {
+    background-color: #ffeef0;
+    padding: 4em 2em;
+    text-align: center;
+    position: relative;
+}
+
+#our-partners h3 {
+    font-size: 2.2em;
+    color: #800000;
+    margin-bottom: 2em;
+}
+
+.partners-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4em;
+}
+
+.partner {
+    text-align: center;
+}
+
+.partner img {
+    width: 120px;
+    height: auto;
+    display: block;
+    margin: 0 auto 1em auto;
+}
+
+/* Success Stories Section Styles */
+#success-stories {
+    background-color: #fff;
+    padding: 4em 2em;
+    text-align: center;
+    position: relative;
+}
+
+#success-stories h3 {
+    font-size: 2.2em;
+    color: #800000;
+    margin-bottom: 2em;
+}
+
+.success-story {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f8f8;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.story-image img {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1.5em;
+}
+
+.story-content {
+    text-align: left;
+}
+
+.story-content h4 {
+    font-size: 1.5em;
+    color: #800000;
+    margin-bottom: 0.5em;
+    font-style: italic;
+}
+
+.story-content p {
+    font-size: 1em;
+    color: #444;
+    line-height: 1.6;
+}
+
+.story-indicators {
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #800000;
+    border-radius: 50%;
+    opacity: 0.3;
+    transition: opacity 0.3s;
+}
+
+.indicator.active {
+    opacity: 1;
+}
+
+/* Contact Us Section Styles */
+#contact-us {
+    background-color: #fff;
+    padding: 4em 2em;
+    text-align: center;
+    position: relative;
+}
+
+#contact-us h3 {
+    font-size: 2.2em;
+    color: #800000;
+    margin-bottom: 2em;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 3em;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.contact-form {
+    background-color: #f8f8f8;
+    padding: 2em;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    width: 45%;
+    max-width: 500px;
+    text-align: left;
+}
+
+.contact-form form input,
+.contact-form form textarea {
+    width: 100%;
+    padding: 0.8em;
+    margin-bottom: 1.2em;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+.contact-form form button.send-message {
+    background-color: #800000;
+    color: white;
+    padding: 0.8em 1.5em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.contact-form form button.send-message:hover {
+    background-color: #600505;
+}
+
+.contact-info {
+    width: 45%;
+    max-width: 400px;
+    text-align: left;
+}
+
+.contact-info .contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2em;
+}
+
+.contact-info .contact-details img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+.contact-info .contact-details p {
+    font-size: 1em;
+    color: #444;
+    margin: 0;
+}
+
+.contact-info .contact-details span {
+    font-weight: bold;
+    color: #800000;
+}
+
+/* Footer Section Styles */
+#footer {
+    background-color: #600505;
+    color: white;
+    padding: 2em;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto 1.5em;
+    flex-wrap: wrap;
+}
+
+.footer-content p {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.2em;
+}
+
+.social-links a {
+    display: inline-block;
+}
+
+.social-links img {
+    width: 30px;
+    height: auto;
+}
+
+.footer-rights {
+    font-size: 1em;
+    margin-top: 1.5em;
+    color: #ddd;
+}
